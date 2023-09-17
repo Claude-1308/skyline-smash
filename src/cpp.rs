@@ -940,9 +940,7 @@ pub mod root {
         pub struct EColorKind (pub i32);
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
-        pub struct HitStopMulTarget {
-            pub _address: u8,
-        }
+        pub struct HitStopMulTarget (pub i32);
         #[repr(C)]
         #[derive(Debug, Copy, Clone)]
         pub struct FighterPikminLinkEventWeaponPikminSetPowerMulStatus {
