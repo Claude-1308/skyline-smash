@@ -1700,6 +1700,32 @@ pub mod root {
             }
         }
 
+        pub mod KiilaDarzManager {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager17is_loaded_fighterEi"]
+                pub fn is_loaded_fighter(
+                    entry_id: i32,
+                );
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager25load_summon_fighter_lightEiNS_11FighterKindEii"]
+                pub fn load_summon_fighter_light(
+                    entry_id: i32,
+                    fighter_kind: root::app::FighterKind,
+                    team_no: i32,
+                    unk: i32
+                );
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager22get_light_fighter_kindEi"]
+                pub fn get_light_fighter_kind(
+                    entry_id: i32
+                );
+            }
+        }
+
         pub mod KineticUtility {
             #[allow(unused_imports)]
             use super::super::super::root;
