@@ -1752,7 +1752,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app16kiiladarzmanager13start_fighterEiRKN3phx8Vector3fEf"]
                 pub fn start_fighter(
                     entry_id: i32,
-                    position: *const Vector3f,
+                    position: *const root::phx::Vector3f,
                     unk: f32
                 );
             }
