@@ -1710,6 +1710,12 @@ pub mod root {
                 ) -> bool;
             }
             extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager19is_activate_fighterEi"]
+                pub fn is_activate_fighter(
+                    entry_id: i32,
+                ) -> bool;
+            }
+            extern "C" {
                 #[link_name = "\u{1}_ZN3app16kiiladarzmanager25load_summon_fighter_lightEiNS_11FighterKindEii"]
                 pub fn load_summon_fighter_light(
                     entry_id: i32,
