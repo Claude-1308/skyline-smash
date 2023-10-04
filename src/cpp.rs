@@ -1736,6 +1736,18 @@ pub mod root {
                     entry_id: i32
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager32set_figher_information_parameterERNS_18ItemModuleAccessorEiifffN3phx6Hash40E"]
+                pub fn set_fighter_information_parameter(
+                    item_module_accessor: *mut root::app::ItemModuleAccessor,
+                    entry_id: i32,
+                    life: i32,
+                    dmg_react_mul: f32,
+                    atk_dmg_mul: f32,
+                    atk_react_mul: f32,
+                    effect_param_hash: u64
+                );
+            }
         }
 
         pub mod KineticUtility {
