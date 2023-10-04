@@ -1748,6 +1748,14 @@ pub mod root {
                     effect_param_hash: u64
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager13start_fighterEiRKN3phx8Vector3fEf"]
+                pub fn start_fighter(
+                    entry_id: i32,
+                    position: *const Vector3f,
+                    unk: f32
+                );
+            }
         }
 
         pub mod KineticUtility {
