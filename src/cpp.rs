@@ -1730,6 +1730,12 @@ pub mod root {
                     entry_id: i32
                 );
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager20entry_summon_fighterEi"]
+                pub fn entry_summon_fighter(
+                    entry_id: i32
+                );
+            }
         }
 
         pub mod KineticUtility {
