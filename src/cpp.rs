@@ -1707,7 +1707,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app16kiiladarzmanager17is_loaded_fighterEi"]
                 pub fn is_loaded_fighter(
                     entry_id: i32,
-                );
+                ) -> bool;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app16kiiladarzmanager25load_summon_fighter_lightEiNS_11FighterKindEii"]
@@ -1722,7 +1722,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app16kiiladarzmanager22get_light_fighter_kindEi"]
                 pub fn get_light_fighter_kind(
                     entry_id: i32
-                );
+                ) -> i32;
             }
         }
 
@@ -15587,7 +15587,7 @@ pub mod root {
                 use super::super::super::super::root;
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind24TeamModule__team_no_implEPNS_26BattleObjectModuleAccessorE"]
-                    pub fn team_no(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> u64;
+                    pub fn team_no(module_accessor: *mut root::app::BattleObjectModuleAccessor) -> i32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31TeamModule__team_second_no_implEPNS_26BattleObjectModuleAccessorE"]
