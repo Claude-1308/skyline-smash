@@ -1724,6 +1724,12 @@ pub mod root {
                     entry_id: i32
                 ) -> i32;
             }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app16kiiladarzmanager18deactivate_fighterEi"]
+                pub fn deactivate_fighter(
+                    entry_id: i32
+                );
+            }
         }
 
         pub mod KineticUtility {
