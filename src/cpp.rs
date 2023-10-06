@@ -19912,7 +19912,7 @@ pub mod root {
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd16GET_VOICE_REGIONEP9lua_State"]
-                pub fn GET_VOICE_REGION(arg1: u64);
+                pub fn GET_VOICE_REGION(arg1: u64) -> i32;
             }
             extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd20GET_VOICE_REGION_NEWEP9lua_State"]
