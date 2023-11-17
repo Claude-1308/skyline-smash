@@ -9361,6 +9361,14 @@ pub mod root {
                     ) -> *mut root::app::Article;
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind39ArticleModule__get_article_from_no_implEPNS_26BattleObjectModuleAccessorEii"]
+                    pub fn get_article_from_no(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: libc::c_int,
+                        arg3: libc::c_int
+                    ) -> *mut root::app::Article;
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind33ArticleModule__get_joint_pos_implEPNS_26BattleObjectModuleAccessorEiN3phx6Hash40ENS_22ArticleOperationTargetE"]
                     pub fn get_joint_pos(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
