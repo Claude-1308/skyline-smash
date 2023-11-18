@@ -9351,7 +9351,7 @@ pub mod root {
                     pub fn get_active_num(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> u64;
+                    ) -> i32;
                 }
                 extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31ArticleModule__get_article_implEPNS_26BattleObjectModuleAccessorEi"]
