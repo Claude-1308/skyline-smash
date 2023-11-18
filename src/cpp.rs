@@ -1293,6 +1293,36 @@ pub mod root {
             }
         }
 
+        pub mod Item {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app4item14request_removeEP9lua_State"]
+                pub fn request_remove(
+                    arg: u64
+                );
+                #[link_name = "\u{1}_ZN3app4item9variationEP9lua_State"]
+                pub fn variation(
+                    arg: u64
+                ) -> i32;
+            }
+        }
+
+        pub mod item_collision_manager {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app22item_collision_manager24disable_ground_collisionEP9lua_State"]
+                pub fn disable_ground_collision(
+                    arg: u64
+                );
+                #[link_name = "\u{1}_ZN3app22item_collision_manager23remove_ground_collisionEP9lua_State"]
+                pub fn remove_ground_collision(
+                    arg: u64
+                );
+            }
+        }
+
         pub mod FighterUtil {
             #[allow(unused_imports)]
             use super::super::super::root;
