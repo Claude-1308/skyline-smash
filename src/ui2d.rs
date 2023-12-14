@@ -40,11 +40,11 @@ pub trait SmashPane {
 
 impl SmashPane for Pane {
     unsafe fn find_pane_by_name_recursive(&self, s: &str) -> Option<*mut Pane> {
-        find_pane_by_name_recursive(self, c_str!(s))
+        Some(find_pane_by_name_recursive(self, c_str!(s)))
     }
 
     unsafe fn find_pane_by_name(&self, s: &str, recursive: bool) -> Option<*mut Pane> {
-        find_pane_by_name(self, c_str!(s), recursive)
+        Some(find_pane_by_name(self, c_str!(s), recursive))
     }
 
     unsafe fn remove_child(&mut self, child: &Pane) {
