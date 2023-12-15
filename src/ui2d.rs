@@ -31,20 +31,20 @@ macro_rules! c_str {
 }
 
 pub trait SmashPane {
-    unsafe fn find_pane_by_name_recursive(&self, s: &str) -> Option<*mut Pane>;
-    unsafe fn find_pane_by_name(&self, s: &str, recursive: bool) -> Option<*mut Pane>;
+    unsafe fn find_pane_by_name_recursive(&self, s: &str) -> Option<&mut Pane>;
+    unsafe fn find_pane_by_name(&self, s: &str, recursive: bool) -> Option<&mut Pane>;
     unsafe fn remove_child(&mut self, child: &Pane);
     unsafe fn append_child(&mut self, child: &Pane);
     unsafe fn detach(&mut self);
 }
 
 impl SmashPane for Pane {
-    unsafe fn find_pane_by_name_recursive(&self, s: &str) -> Option<*mut Pane> {
-        Some(find_pane_by_name_recursive(self, c_str!(s)))
+    unsafe fn find_pane_by_name_recursive(&self, s: &str) -> Option<&mut Pane> {
+        find_pane_by_name_recursive(self, c_str!(s)).as_mut()
     }
 
-    unsafe fn find_pane_by_name(&self, s: &str, recursive: bool) -> Option<*mut Pane> {
-        Some(find_pane_by_name(self, c_str!(s), recursive))
+    unsafe fn find_pane_by_name(&self, s: &str, recursive: bool) -> Option<&mut Pane> {
+        find_pane_by_name(self, c_str!(s), recursive).as_mut()
     }
 
     unsafe fn remove_child(&mut self, child: &Pane) {
