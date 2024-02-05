@@ -1305,6 +1305,11 @@ pub mod root {
                 pub fn variation(
                     arg: u64
                 ) -> i32;
+                #[link_name = "\u{1}_ZN3app4item13set_life_typeEP9lua_StateNS_16ItemLifetimeTypeE"]
+                pub fn set_life_type(
+                    arg: u64,
+                    life_type: i32
+                );
             }
         }
 
