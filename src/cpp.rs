@@ -2319,6 +2319,61 @@ pub mod root {
 
         }
 
+        pub mod FighterSpecializer_Kirby {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby10copy_setupERNS_21FighterModuleAccessorEiNS_11FighterKindEbb"]
+                pub fn copy_setup(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32,
+                    arg3: root::app::FighterKind,
+                    arg4: bool,
+                    arg5: bool
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby10drink_itemERNS_7FighterE"]
+                pub fn drink_item(
+                    arg1: *mut root::app::Fighter,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby13get_copy_kindERKNS_21FighterModuleAccessorE"]
+                pub fn get_copy_kind(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby16get_copy_slot_noERKNS_21FighterModuleAccessorE"]
+                pub fn get_copy_slot_no(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby13inhale_objectERNS_7FighterE"]
+                pub fn inhale_object(
+                    arg1: *mut root::app::Fighter,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby28purin_clear_copy_attack_dataERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_clear_copy_attack_data(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby28purin_remove_effect_flushingERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_remove_effect_flushing(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby27purin_req_effect_dash_smokeERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_req_effect_dash_smoke(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app24FighterSpecializer_Kirby15purin_set_powerERNS_26BattleObjectModuleAccessorE"]
+                pub fn purin_set_power(
+                    arg1: *mut root::app::BattleObjectModuleAccessor,
+                );
+            }
+        }
+
         pub mod FighterSpecializer_Peach {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -2415,6 +2470,19 @@ pub mod root {
             }
         }
 
+        pub mod FighterSpecializer_Murabito {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app27FighterSpecializer_Murabito22check_special_lw_plantERNS_21FighterModuleAccessorEN3phx8Vector2fEf"]
+                pub fn check_special_lw_plant(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: root::phx::Vector2f,
+                    arg3: f32
+                ) -> bool;
+            }
+        }
+
         pub mod FighterSpecializer_Lucario {
             #[allow(unused_imports)]
             use super::super::super::root;
@@ -2473,21 +2541,50 @@ pub mod root {
             #[allow(unused_imports)]
             use super::super::super::root;
             extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
-                pub fn throwaway_sword(
-                    arg1: *mut root::app::Fighter,
-                    arg2: root::phx::Vector2f,
-                    arg3: bool
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_grimoireERNS_21FighterModuleAccessorEi"]
+                pub fn change_grimoire(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32,
                 );
-            }
-            extern "C" {
+
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_hud_kindERNS_7FighterEi"]
                 pub fn change_hud_kind(
                     arg1: *mut root::app::Fighter,
                     arg2: i32,
                 );
-            }
-            extern "C" {
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet13charge_pointsERNS_21FighterModuleAccessorE"]
+                pub fn charge_points(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet20check_special_lw_posERNS_21FighterModuleAccessorE"]
+                pub fn check_special_lw_pos(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                ) -> bool;
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet24exit_special_n_tron_holdERNS_21FighterModuleAccessorE"]
+                pub fn exit_special_n_tron_hold(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                );
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet22get_active_thunder_numERNS_21FighterModuleAccessorEi"]
+                pub fn get_active_thunder_num(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet13get_magickindERNS_21FighterModuleAccessorEi"]
+                pub fn get_magickind(
+                    arg1: *mut root::app::FighterModuleAccessor,
+                    arg2: i32
+                ) -> i32;
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet25get_special_hi_jump_speedERNS_21FighterModuleAccessorE"]
+                pub fn get_special_hi_jump_speed(
+                    arg1: *mut root::app::FighterModuleAccessor
+                ) -> nnsdk::root::nn::util::Vector3f;
+
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet17set_flag_to_tableERNS_21FighterModuleAccessorEibi"]
                 pub fn set_flag_to_table(
                     arg1: *mut root::app::FighterModuleAccessor,
@@ -2495,19 +2592,18 @@ pub mod root {
                     arg3: bool,
                     arg4: i32,
                 );
-            }
-            extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15change_grimoireERNS_21FighterModuleAccessorEi"]
-                pub fn change_grimoire(
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet22special_lw_heal_damageERNS_21FighterModuleAccessorE"]
+                pub fn special_lw_heal_damage(
                     arg1: *mut root::app::FighterModuleAccessor,
-                    arg2: i32,
                 );
-            }
-            extern "C" {
-                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet25get_special_hi_jump_speedERNS_21FighterModuleAccessorE"]
-                pub fn get_special_hi_jump_speed(
-                    arg1: *mut root::app::FighterModuleAccessor
-                ) -> nnsdk::root::nn::util::Vector3f;
+
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
+                pub fn throwaway_sword(
+                    arg1: *mut root::app::Fighter,
+                    arg2: root::phx::Vector2f,
+                    arg3: bool
+                );
             }
         }
 
