@@ -16780,7 +16780,7 @@ pub mod root {
                     pub fn get_sum_speed(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
-                    ) -> f32;
+                    ) -> root::phx::Vector2f;
                 }
                 extern "C" {
                     /// Returns the current x velocity based on the specified kinetic energy attribute
