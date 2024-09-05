@@ -2619,7 +2619,7 @@ pub mod root {
                 #[link_name = "\u{1}_ZN3app25FighterSpecializer_Reflet15throwaway_swordERNS_7FighterERN3phx8Vector2fEb"]
                 pub fn throwaway_sword(
                     arg1: *mut root::app::Fighter,
-                    arg2: root::phx::Vector2f,
+                    arg2: *const root::phx::Vector2f,
                     arg3: bool
                 );
             }
@@ -3166,7 +3166,7 @@ pub mod root {
             use super::super::super::root;
             extern "C" {
                 #[link_name = "\u{1}_ZN3app24FighterSpecializer_Demon20clear_past_log_throwERNS_26BattleObjectModuleAccessorE"]
-                pub fn clear_log_past_throw(
+                pub fn clear_past_log_throw(
                     module_accessor: *mut root::app::BattleObjectModuleAccessor
                 );
             }
@@ -3208,6 +3208,18 @@ pub mod root {
                     module_accessor: *mut root::app::BattleObjectModuleAccessor,
                     arg2: i32
                 ) -> u64;
+            }
+        }
+
+        pub mod FighterSpecializer_Donkey {
+            #[allow(unused_imports)]
+            use super::super::super::root;
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app25FighterSpecializer_Donkey16apply_lift_paramERNS_21FighterModuleAccessorEb"]
+                pub fn apply_lift_param(
+                    fighter_module_accessor: *mut root::app::FighterModuleAccessor,
+                    arg2: bool
+                );
             }
         }
 
@@ -9835,6 +9847,13 @@ pub mod root {
                     );
                 }
                 extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind36ShieldModule__set_hit_stop_slow_implEPNS_26BattleObjectModuleAccessorEb"]
+                    pub fn set_hit_stop_slow(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: bool,
+                    );
+                }
+                extern "C" {
                     #[link_name = "\u{1}_ZN3app8lua_bind31ShieldModule__is_no_m_ball_implEPNS_26BattleObjectModuleAccessorEi"]
                     pub fn is_no_m_ball(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
@@ -14035,6 +14054,14 @@ pub mod root {
                     pub fn clear_2(
                         module_accessor: *mut root::app::BattleObjectModuleAccessor,
                         arg2: libc::c_int,
+                    ) -> u64;
+                }
+                extern "C" {
+                    #[link_name = "\u{1}_ZN3app8lua_bind32SlowModule__clear_immediate_implEPNS_26BattleObjectModuleAccessorEib"]
+                    pub fn clear_immediate(
+                        module_accessor: *mut root::app::BattleObjectModuleAccessor,
+                        arg2: libc::c_int,
+                        arg3: bool
                     ) -> u64;
                 }
                 extern "C" {
@@ -20048,6 +20075,10 @@ pub mod root {
                 pub fn FT_MOTION_INTP_WAIT(arg1: u64);
             }
             extern "C" {
+                #[link_name = "\u{1}_ZN3app10sv_animcmd24FT_MOTION_INTP_WAIT_ITEMEP9lua_State"]
+                pub fn FT_MOTION_INTP_WAIT_ITEM(arg1: u64);
+            }
+            extern "C" {
                 #[link_name = "\u{1}_ZN3app10sv_animcmd14FT_MOTION_RATEEP9lua_State"]
                 pub fn FT_MOTION_RATE(arg1: u64);
             }
@@ -20769,6 +20800,10 @@ pub mod root {
                 pub fn damage_log_value(
                     lua_state: u64
                 ) -> i32;
+            }
+            extern "C" {
+                #[link_name = "\u{1}_ZN3app14sv_information8stage_idEv"]
+                pub fn stage_id() -> i32;
             }
         }
         pub mod sv_kinetic_energy {
