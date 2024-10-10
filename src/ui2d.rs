@@ -24,6 +24,9 @@ pub unsafe fn pane_remove_child(pane: *mut Pane, child: *const Pane);
 #[skyline::from_offset(0x58250)]
 pub unsafe fn pane_append_child(pane: *mut Pane, child: *const Pane);
 
+#[skyline::from_offset(0x37a1ef0)]
+pub unsafe fn pane_set_text_string(pane: *mut TextBox, s: *const c_char);
+
 macro_rules! c_str {
     ($l:tt) => {
         [$l.as_bytes(), "\u{0}".as_bytes()].concat().as_ptr()
@@ -64,7 +67,6 @@ impl SmashPane for Pane {
 pub trait SmashTextBox {
     unsafe fn set_text_string(&mut self, s: &str);
 }
-
 
 impl SmashTextBox for TextBox {
     unsafe fn set_text_string(&mut self, s: &str) {
