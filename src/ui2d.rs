@@ -15,9 +15,6 @@ pub unsafe fn find_pane_by_name(
     recursive: bool,
 ) -> *mut Pane;
 
-#[skyline::from_offset(0x37a1270)]
-pub unsafe fn pane_set_text_string(pane: *mut TextBox, s: *const c_char);
-
 #[skyline::from_offset(0x58290)]
 pub unsafe fn pane_remove_child(pane: *mut Pane, child: *const Pane);
 
